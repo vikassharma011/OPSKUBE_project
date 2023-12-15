@@ -1,6 +1,7 @@
 // src/components/Navbar.js
 import React from 'react';
 import { AppBar, Toolbar, Typography, Badge } from '@mui/material';
+import "./Navbar.css"
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import {Link} from 'react-router-dom';
 import { useSelector } from 'react-redux';
@@ -12,7 +13,7 @@ const Navbar = () => {
     <AppBar position="static">
       <Toolbar>
         <Typography variant="h6" component="div">
-        <Link to="/">Your Company Name</Link>
+        <Link to="/" className='company'>Your Company Name</Link>
         </Typography>
         <Typography>  ----    </Typography>
         <Badge badgeContent={cartCount} color="secondary">
@@ -21,7 +22,7 @@ const Navbar = () => {
           </Link>
         </Badge>
         <Typography>    ----  </Typography>
-        <Link to="/orders">Orders</Link>
+        <Link to="/orders" className='company' >Orders</Link>
       </Toolbar>
     </AppBar>
   );
